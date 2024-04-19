@@ -1,15 +1,17 @@
-# PHP test
+# Refactor Details
 
-## 1. Installation
+## Configurations
+- Added Config file to contain config data.
 
-  - create an empty database named "phptest" on your MySQL server
-  - import the dbdump.sql in the "phptest" database
-  - put your MySQL server credentials in the constructor of DB class
-  - you can test the demo script in your shell: "php index.php"
+## Trait
+- Added "Instanceable" trait that seemed to be frequently used in different classes
 
-## 2. Expectations
+## Services
+- Added a database service class that handles database connection and operations
 
-This simple application works, but with very old-style monolithic codebase, so do anything you want with it, to make it:
+## Models
+- Added model interface and model class to handle different resources.
+- Model class is also integrated with DatabaseService class in order to easily access and manipulate records of a specific resource.
 
-  - easier to work with
-  - more maintainable
+## Utilities / Repositories
+- Added a Manager class (parent) that is integrated with Model class which basically handles the business logic of the application.
