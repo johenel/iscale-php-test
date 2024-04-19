@@ -9,7 +9,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Johenel\\Iscale\\": "src/"
+            "App\\": "App/"
         }
     },
     "authors": [

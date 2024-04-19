@@ -1,8 +1,9 @@
 <?php
 
 define('ROOT', __DIR__);
-require_once(ROOT . '/utils/NewsManager.php');
-require_once(ROOT . '/utils/CommentManager.php');
+
+use App\Utilities\NewsManager;
+use App\Utilities\CommentManager;
 
 foreach (NewsManager::getInstance()->listNews() as $news) {
 	echo("############ NEWS " . $news->getTitle() . " ############\n");
